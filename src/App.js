@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import AddTransaction from './components/AddTransaction';
 import TransactionHistory from './components/TransactionHistory';
 import FinancialSummary from './components/FinancialSummary';
+import pic1 from './components/pic1.png';
+import pic2 from './components/pic2.png';
 import './App.css';
 
 function App() {
@@ -54,8 +56,10 @@ function App() {
           <p>${balance}</p>
         </div>
         <div className="income-expense">
-          <div className='income'><h4>Income</h4><p>${income}</p></div>
-          <div className='expense'><h4>Expense</h4><p>${expense}</p></div>
+          <div className='income'><img src={pic1} alt="Income Icon" />
+            <h4>${income}</h4><p>Income</p></div>
+          <div className='expense'>
+          <img src={pic2} alt="Income Icon" /><h4>${expense}</h4><p>Expense</p></div>
         </div>
       </div>
 

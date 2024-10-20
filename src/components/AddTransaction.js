@@ -4,12 +4,11 @@ import '../App.css';
 const AddTransaction = ({ addTransaction }) => {
   const [type, setType] = useState('Income');
   const [category, setCategory] = useState('');
-  const [amount, setAmount] = useState(''); // Start with an empty string
+  const [amount, setAmount] = useState('');
   const [description, setDescription] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Remove the dollar signs before parsing
     const numericAmount = parseFloat(amount.replace(/[$]/g, ''));
     if (category && !isNaN(numericAmount) && description) {
       addTransaction({ type, category, amount: numericAmount, description });
@@ -22,7 +21,7 @@ const AddTransaction = ({ addTransaction }) => {
   const handleAmountChange = (e) => {
     const value = e.target.value;
 
-    // Allow only numbers, the decimal point, and the dollar sign (optional)
+   
     if (/^\$?\d*\.?\d*$/.test(value)) {
       setAmount(value);
     }
