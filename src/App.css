@@ -292,6 +292,7 @@
    border-radius: 10px;
    padding: 10px;
  }
+<<<<<<< HEAD
  .expense{
   height: 100px;
   background: #E6E2E6;
@@ -305,6 +306,10 @@
    gap: 15px;
    margin-top: 15px;
  }
+=======
+ 
+
+>>>>>>> cbcee3706da9280ff25c0fa289875ae655887368
  
  .add-transaction {
    height: 400px;
